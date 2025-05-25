@@ -1,7 +1,4 @@
 -- Active: 1748068332919@@127.0.0.1@5432@conservation_db@public
-DROP TABLE rangers;
-DROP TABLE species;
-DROP TABLE sightings;
 
 CREATE TABLE rangers(
     ranger_id SERIAL PRIMARY KEY,
