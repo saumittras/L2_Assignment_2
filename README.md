@@ -11,12 +11,13 @@
 ## Primary Key
 
 <p>যখন কোন ডাটাবেস সিস্টেমের টেবিলের কোন কলাম কে ইউনিক আইডেন্টিফায়ার হিসাবে ব্যবহার করা হয় তখন সেটা কে প্রাথমিক কি বলে।  </p>
-```CREATE TABLE students (
-    student_id SERIAL PRIMARY KEY,
-    student_name TEXT,
-    subject_id INT,
 
-);```sql
+CREATE TABLE students (<br>
+student_id SERIAL PRIMARY KEY,<br>
+student_name TEXT,<br>
+subject_id INT,<br>
+
+);
 
 | student_id | student_name   | subject_id |
 | ---------- | -------------- | ---------- |
@@ -30,20 +31,19 @@
 
 <p>এখানে স্টুডেন্ট আইডি কলাম কে প্রাইমারি কি হিসাবে ব্যাবহার করা হয়েছে </p>
 
-````CREATE TABLE students (
-    course_id SERIAL PRIMARY KEY,
-    course_name TEXT
-    subject_id INT,
-    subject_id REFERENCES subjects(subject_id)
+CREATE TABLE students (<br>
+course_id SERIAL PRIMARY KEY,<br>
+course_name TEXT,<br>
+subject_id INT, <br>
+subject_id REFERENCES subjects(subject_id)<br>
 );
 
-CREATE TABLE subjects (
-    subject_id SERIAL PRIMARY KEY,
-    subject_name TEXT,
-    teacher_id INT ,
-    teacher_id REFERENCES teachers(teacher_id)
-);
-```sql
+CREATE TABLE subjects (<br>
+subject_id SERIAL PRIMARY KEY,<br>
+subject_name TEXT,<br>
+teacher_id INT ,<br>
+teacher_id REFERENCES teachers(teacher_id)<br>
+)
 
 ## Student Table
 
@@ -72,4 +72,3 @@ CREATE TABLE subjects (
 # 4. What are the LIMIT and OFFSET clauses used for?
 
 # 5. How can you calculate aggregate functions like COUNT(), SUM(), and AVG() in PostgreSQL?
-````
