@@ -11,6 +11,12 @@
 ## Primary Key
 
 <p>যখন কোন ডাটাবেস সিস্টেমের টেবিলের কোন কলাম কে ইউনিক আইডেন্টিফায়ার হিসাবে ব্যবহার করা হয় তখন সেটা কে প্রাথমিক কি বলে।  </p>
+```CREATE TABLE students (
+    student_id SERIAL PRIMARY KEY,
+    student_name TEXT,
+    subject_id INT,
+
+);```sql
 
 | student_id | student_name   | subject_id |
 | ---------- | -------------- | ---------- |
@@ -23,6 +29,21 @@
 ## Foreign Key
 
 <p>এখানে স্টুডেন্ট আইডি কলাম কে প্রাইমারি কি হিসাবে ব্যাবহার করা হয়েছে </p>
+
+````CREATE TABLE students (
+    course_id SERIAL PRIMARY KEY,
+    course_name TEXT
+    subject_id INT,
+    subject_id REFERENCES subjects(subject_id)
+);
+
+CREATE TABLE subjects (
+    subject_id SERIAL PRIMARY KEY,
+    subject_name TEXT,
+    teacher_id INT ,
+    teacher_id REFERENCES teachers(teacher_id)
+);
+```sql
 
 ## Student Table
 
@@ -44,12 +65,11 @@
 | 4          | ICT          | 4          |
 | 5          | Physics      | 5          |
 
-## Primary Key
+<p>আমরা যদি টেবিল দুইটি ভালোভাবে দেখি তবে দেখবো যে, স্টুডেন্ট টেবিলে সাব্জেক্ট টেবিলের প্রাইমারি কি কে রেজারেন্স করা হয়েছে। যা ফরেন কি হিসাবে পরিচিত </p>
 
-<p>যখন কোন ডাটাবেস সিস্টেমের একটি টেবিলে অন্য কোন টেবিলের প্রাইমারি কি কে ব্যবহার করা হয় তখন সেটিকে ফরেন কি বলা হয়।</p>
+# 3. What is the difference between the VARCHAR and CHAR data types?
 
-# 4. What is the difference between the VARCHAR and CHAR data types?
+# 4. What are the LIMIT and OFFSET clauses used for?
 
-# 5. What are the LIMIT and OFFSET clauses used for?
-
-# 6. How can you calculate aggregate functions like COUNT(), SUM(), and AVG() in PostgreSQL?
+# 5. How can you calculate aggregate functions like COUNT(), SUM(), and AVG() in PostgreSQL?
+````
