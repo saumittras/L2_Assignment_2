@@ -7,19 +7,46 @@
 <p>
 ডাটাবেস সিস্টেমে কি হচ্ছে একটি কলাম অথবা একাধিক কলামের সমষ্টি, যা একটি নির্দিষ্ট রো কে চিহ্নিত করে। যার মাধ্যমে একটি ডাটাবেসের অসংখ্য রেকর্ড থেকে নির্দিষ্ট রেকর্ডকে খুজে পাওয়া যায়। 
 </p>
+
 ## Primary Key
+
 <p>যখন কোন ডাটাবেস সিস্টেমের টেবিলের কোন কলাম কে ইউনিক আইডেন্টিফায়ার হিসাবে ব্যবহার করা হয় তখন সেটা কে প্রাথমিক কি বলে।  </p>
 
 | student_id | student_name   | subject_id |
 | ---------- | -------------- | ---------- |
 | 1          | John Doe       | 1          |
-| ---------- | ------------   | ---------- |
-| 2          | Carolina Shnel | 3          |
-| ---------- | ------------   | ---------- |
-| 3          | Jamila Khatun  | 1          |
-| ---------- | ------------   | ---------- |
+| 2          | Salam Hosain   | 2          |
+| 3          | Carolina Shnel | 3          |
+| 4          | Salma Banu     | 1          |
+| 5          | Jamila Khatun  | 1          |
 
-# 3. Explain the Primary Key and Foreign Key concepts in PostgreSQL.
+## Foreign Key
+
+<p>এখানে স্টুডেন্ট আইডি কলাম কে প্রাইমারি কি হিসাবে ব্যাবহার করা হয়েছে </p>
+
+## Student Table
+
+| student_id | student_name   | subject_id |
+| ---------- | -------------- | ---------- |
+| 1          | John Doe       | 1          |
+| 2          | Salam Hosain   | 2          |
+| 3          | Carolina Shnel | 3          |
+| 4          | Salma Banu     | 1          |
+| 5          | Jamila Khatun  | 1          |
+
+## Subject Table
+
+| subject_id | subject_name | teacher_id |
+| ---------- | ------------ | ---------- |
+| 1          | Bangla       | 1          |
+| 2          | Math         | 2          |
+| 3          | English      | 3          |
+| 4          | ICT          | 4          |
+| 5          | Physics      | 5          |
+
+## Primary Key
+
+<p>যখন কোন ডাটাবেস সিস্টেমের একটি টেবিলে অন্য কোন টেবিলের প্রাইমারি কি কে ব্যবহার করা হয় তখন সেটিকে ফরেন কি বলা হয়।</p>
 
 # 4. What is the difference between the VARCHAR and CHAR data types?
 
