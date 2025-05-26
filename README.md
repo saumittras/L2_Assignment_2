@@ -4,6 +4,21 @@
 
 # 2. Explain the Primary Key and Foreign Key concepts in PostgreSQL.
 
+<p>
+ডাটাবেস সিস্টেমে কি হচ্ছে একটি কলাম অথবা একাধিক কলামের সমষ্টি, যা একটি নির্দিষ্ট রো কে চিহ্নিত করে। যার মাধ্যমে একটি ডাটাবেসের অসংখ্য রেকর্ড থেকে নির্দিষ্ট রেকর্ডকে খুজে পাওয়া যায়। 
+</p>
+## Primary Key
+<p>যখন কোন ডাটাবেস সিস্টেমের টেবিলের কোন কলাম কে ইউনিক আইডেন্টিফায়ার হিসাবে ব্যবহার করা হয় তখন সেটা কে প্রাথমিক কি বলে।  </p>
+
+| student_id | student_name   | subject_id |
+| ---------- | -------------- | ---------- |
+| 1          | John Doe       | 1          |
+| ---------- | ------------   | ---------- |
+| 2          | Carolina Shnel | 3          |
+| ---------- | ------------   | ---------- |
+| 3          | Jamila Khatun  | 1          |
+| ---------- | ------------   | ---------- |
+
 # 3. Explain the Primary Key and Foreign Key concepts in PostgreSQL.
 
 # 4. What is the difference between the VARCHAR and CHAR data types?
