@@ -124,3 +124,25 @@ LIMIT 10 OFFSET 10;
 <p>পেজ ২, প্রতি পেজে ১০টি করে রেজাল্ট</p>
 
 # 5. How can you calculate aggregate functions like COUNT(), SUM(), and AVG() in PostgreSQL?
+
+## Aggregate Functions কি?
+
+Aggregate functions ব্যবহার করা হয় টেবিলের একাধিক রো থেকে একটা সারাংশ মান (summary value) বের করতে — যেমন: মোট সংখ্যা, যোগফল, গড় ইত্যাদি।
+
+### COUNT() → মোট কয়টা রেকর্ড আছে?
+
+SELECT COUNT(\*) FROM students;
+
+<p>এই কোয়েরি students টেবিলে মোট কয়টা রো আছে তা দেখায়।</p>
+
+### SUM() → মোট যোগফল বের করতে
+
+SELECT SUM(marks) FROM students;
+
+<p>এই কোয়েরি marks কলামের মোট যোগফল দেখাবে।</p>
+
+### AVG() → গড় মান (average) বের করতে
+
+SELECT AVG(marks) FROM students;
+
+<p> এই কোয়েরি marks কলামের গড় মান দেখাবে।</p>
