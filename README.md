@@ -69,6 +69,29 @@ teacher_id REFERENCES teachers(teacher_id)<br>
 
 # 3. What is the difference between the VARCHAR and CHAR data types?
 
+<p>
+দুইটি টেক্সট টাইপের ডাটা সংরক্ষণের জন্য ব্যবহার করা হয়। তবুও দুইটি টাইপের ডাটা সংরক্ষণের ধরণ দুই রকম এবং পারফর্মেন্সের ভিন্যতা রয়েছে।</p>
+
+-- CHAR(5) হলে:
+INSERT INTO user (code) VALUES ('A');
+-- এটা সংরক্ষণ হবে: 'A ' (পিছনে ৪টা স্পেস সহ)
+
+-- VARCHAR(5) হলে:
+INSERT INTO user (code) VALUES ('A');
+-- এটা সংরক্ষণ হবে: 'A' (শুধু A)
+
+ <p>সেই ভিন্যতা গুলো নিচে টেবিলের মাধ্যমে তুলে ধরা হইলো। </p>
+
+## CHAR বনাম VARCHAR
+
+| `CHAR(n)` (Fixed-length)                          | `VARCHAR(n)` (Variable-length)                   |
+| ------------------------------------------------- | ------------------------------------------------ |
+| নির্দিষ্ট দৈর্ঘ্য — সবসময় `n` ক্যারেক্টার রাখে    | পরিবর্তনশীল দৈর্ঘ্য — যতটুকু লাগে ততটুকুই রাখে   |
+| ছোট হলে ফাঁকা জায়গা (spaces) দিয়ে পূরণ করে        | শুধু প্রয়োজনীয় ক্যারেক্টার রাখে + extra 1-2 byte |
+| একটু দ্রুত কাজ করে কারণ সাইজ ফিক্সড               | একটু ধীরে, কারণ সাইজ প্রতিবার গুনে নিতে হয়       |
+| যখন ডেটা সবসময় একই দৈর্ঘ্যের হয় (যেমন: PIN, Code) | যখন ডেটার দৈর্ঘ্য ভিন্ন হয় (যেমন: নাম, ঠিকানা)   |
+| অকারণে বেশি জায়গা নেয়                             | জায়গা কম খরচ করে                                 |
+
 # 4. What are the LIMIT and OFFSET clauses used for?
 
 # 5. How can you calculate aggregate functions like COUNT(), SUM(), and AVG() in PostgreSQL?
